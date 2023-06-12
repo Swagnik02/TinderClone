@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "328793882626",
+    "project_id": "tinderapps-1aee6",
+    "storage_bucket": "tinderapps-1aee6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328793882626:android:b46f5f1e6670f0a4b6271b",
+        "android_client_info": {
+          "package_name": "com.azapps.tinderclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsNvHkObkYF8u5cZROAhVhGGjbUTwHVqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
