@@ -79,6 +79,11 @@ class UsersRecord extends FirestoreRecord {
   List<String> get rejected => _rejected ?? const [];
   bool hasRejected() => _rejected != null;
 
+  // "image" field.
+  String? _image;
+  String get image => _image ?? '';
+  bool hasImage() => _image != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -93,6 +98,7 @@ class UsersRecord extends FirestoreRecord {
     _gender = snapshotData['gender'] as String?;
     _matches = getDataList(snapshotData['matches']);
     _rejected = getDataList(snapshotData['rejected']);
+    _image = snapshotData['image'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -140,6 +146,7 @@ Map<String, dynamic> createUsersRecordData({
   String? location,
   String? desiredGender,
   String? gender,
+  String? image,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -154,6 +161,7 @@ Map<String, dynamic> createUsersRecordData({
       'location': location,
       'desiredGender': desiredGender,
       'gender': gender,
+      'image': image,
     }.withoutNulls,
   );
 

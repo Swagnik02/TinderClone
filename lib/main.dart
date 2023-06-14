@@ -13,7 +13,6 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'index.dart';
 
 void main() async {
@@ -144,85 +143,52 @@ class _NavBarPageState extends State<NavBarPage> {
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
-    final MediaQueryData queryData = MediaQuery.of(context);
-
     return Scaffold(
-      body: MediaQuery(
-          data: queryData
-              .removeViewInsets(removeBottom: true)
-              .removeViewPadding(removeBottom: true),
-          child: _currentPage ?? tabs[_currentPageName]!),
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
+      body: _currentPage ?? tabs[_currentPageName],
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: Colors.white,
-        selectedItemColor: FlutterFlowTheme.of(context).redApple,
-        unselectedItemColor: FlutterFlowTheme.of(context).grayIcon,
-        selectedBackgroundColor: Color(0x00000000),
-        borderRadius: 8.0,
-        itemBorderRadius: 8.0,
-        margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        width: double.infinity,
-        elevation: 0.0,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.home_outlined,
-                  color: currentIndex == 0
-                      ? FlutterFlowTheme.of(context).redApple
-                      : FlutterFlowTheme.of(context).grayIcon,
-                  size: 24.0,
-                ),
-              ],
+        backgroundColor: Color(0x70090F13),
+        selectedItemColor: Color(0xFFEE8B60),
+        unselectedItemColor: Color(0xFFEE8B60),
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              size: 24.0,
             ),
+            activeIcon: Icon(
+              Icons.home_rounded,
+              size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 1
-                      ? Icons.chat_bubble_rounded
-                      : Icons.chat_bubble_outline,
-                  color: currentIndex == 1
-                      ? FlutterFlowTheme.of(context).redApple
-                      : FlutterFlowTheme.of(context).grayIcon,
-                  size: 24.0,
-                ),
-                Text(
-                  'Chats',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? FlutterFlowTheme.of(context).redApple
-                        : FlutterFlowTheme.of(context).grayIcon,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.chat_bubble_outline,
+              size: 24.0,
             ),
+            activeIcon: Icon(
+              Icons.chat_bubble_rounded,
+              size: 24.0,
+            ),
+            label: 'Chats',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.person,
-                  color: currentIndex == 2
-                      ? FlutterFlowTheme.of(context).redApple
-                      : FlutterFlowTheme.of(context).grayIcon,
-                  size: 24.0,
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outlined,
+              size: 24.0,
             ),
+            label: 'Profile',
+            tooltip: '',
           )
         ],
       ),

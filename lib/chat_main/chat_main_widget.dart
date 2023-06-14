@@ -43,7 +43,7 @@ class _ChatMainWidgetState extends State<ChatMainWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).error,
+        backgroundColor: FlutterFlowTheme.of(context).secondary,
         automaticallyImplyLeading: false,
         title: Text(
           'All Chats',
@@ -121,7 +121,7 @@ class _ChatMainWidgetState extends State<ChatMainWidget> {
                         title: chatInfo.chatPreviewTitle(),
                         userProfilePic: chatInfo.chatPreviewPic(),
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        unreadColor: FlutterFlowTheme.of(context).primary,
+                        unreadColor: FlutterFlowTheme.of(context).secondary,
                         titleTextStyle: GoogleFonts.getFont(
                           'Urbanist',
                           color: FlutterFlowTheme.of(context).primaryText,

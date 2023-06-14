@@ -50,7 +50,7 @@ class _PopupWidgetState extends State<PopupWidget> {
         height: 50.0,
         padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        color: FlutterFlowTheme.of(context).error,
+        color: Color(0xFFFF773D),
         textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
               fontFamily: 'Lexend Deca',
               color: Colors.white,

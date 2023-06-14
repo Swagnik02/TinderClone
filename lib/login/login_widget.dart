@@ -49,7 +49,7 @@ class _LoginWidgetState extends State<LoginWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).redApple,
+        backgroundColor: FlutterFlowTheme.of(context).secondary,
         body: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
           child: Column(
@@ -95,12 +95,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 FlutterFlowTheme.of(context).primaryBtnText,
                             unselectedLabelColor:
                                 FlutterFlowTheme.of(context).gray600,
-                            borderColor:
-                                FlutterFlowTheme.of(context).primaryBtnText,
-                            unselectedBorderColor: Color(0xE1AC3838),
-                            borderWidth: 1.0,
-                            borderRadius: 15.0,
-                            elevation: 0.0,
+                            backgroundColor: Color(0xFFFF692B),
+                            unselectedBackgroundColor:
+                                FlutterFlowTheme.of(context).secondary,
+                            borderColor: Color(0xFFFF692B),
+                            unselectedBorderColor: Color(0xFFFF692B),
+                            borderWidth: 0.0,
+                            borderRadius: 0.0,
+                            elevation: 1.0,
                             labelPadding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
                             tabs: [
@@ -176,7 +178,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFC37070),
+                                          fillColor: Color(0xFFDBB7A9),
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 24.0, 20.0, 24.0),
@@ -242,7 +244,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFC37070),
+                                          fillColor: Color(0xFFDBB7A9),
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 24.0, 20.0, 24.0),
@@ -310,15 +312,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.white,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily: 'Urbanist',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .redApple,
-                                              ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Urbanist',
+                                                    color: Color(0xFFFF692B),
+                                                  ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(
                                             color: Colors.transparent,
@@ -345,8 +345,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .redApple,
+                                          color: Color(0xFFFF692B),
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
                                               .titleSmall
@@ -403,7 +402,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFCCA9A9),
+                                              color: Color(0xFFFF692B),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -435,7 +434,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFC37070),
+                                          fillColor: Color(0xFFDBB7A9),
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 24.0, 20.0, 24.0),
@@ -469,7 +468,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   .bodySmall,
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFCCA9A9),
+                                              color: Color(0xFFFF692B),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -501,7 +500,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFC37070),
+                                          fillColor: Color(0xFFDBB7A9),
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 24.0, 20.0, 24.0),
@@ -578,15 +577,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: Colors.white,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily: 'Urbanist',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .redApple,
-                                              ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Urbanist',
+                                                    color: Color(0xFFFF692B),
+                                                  ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(
                                             color: Colors.transparent,
