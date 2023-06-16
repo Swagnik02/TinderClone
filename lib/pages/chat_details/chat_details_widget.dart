@@ -71,7 +71,7 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).dark600,
+        backgroundColor: Color(0xFFEE8B60),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -109,18 +109,17 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
               ? FFChatPage(
                   chatInfo: snapshot.data!,
                   allowImages: true,
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).primaryBackground,
+                  backgroundColor: Color(0x00000000),
                   timeDisplaySetting: TimeDisplaySetting.alwaysVisible,
                   currentUserBoxDecoration: BoxDecoration(
-                    color: Colors.white,
+                    color: FlutterFlowTheme.of(context).celadon,
                     border: Border.all(
                       color: Colors.transparent,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   otherUsersBoxDecoration: BoxDecoration(
-                    color: Color(0xFF4B39EF),
+                    color: FlutterFlowTheme.of(context).secondary,
                     border: Border.all(
                       color: Colors.transparent,
                     ),

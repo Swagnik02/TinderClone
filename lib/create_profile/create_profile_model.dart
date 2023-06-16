@@ -39,9 +39,6 @@ class CreateProfileModel extends FlutterFlowModel {
   // State field(s) for myBio widget.
   TextEditingController? myBioController;
   String? Function(BuildContext, String?)? myBioControllerValidator;
-  // State field(s) for dpLink widget.
-  TextEditingController? dpLinkController;
-  String? Function(BuildContext, String?)? dpLinkControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -54,7 +51,6 @@ class CreateProfileModel extends FlutterFlowModel {
     desiredGenderController?.dispose();
     cityController?.dispose();
     myBioController?.dispose();
-    dpLinkController?.dispose();
   }
 
   /// Action blocks are added here.

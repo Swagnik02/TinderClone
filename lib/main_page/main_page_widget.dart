@@ -166,6 +166,10 @@ class _MainPageWidgetState extends State<MainPageWidget>
             );
           }
           List<UsersRecord> mainPageUsersRecordList = snapshot.data!;
+          // Return an empty Container when the item does not exist.
+          if (snapshot.data!.isEmpty) {
+            return Container();
+          }
           final mainPageUsersRecord = mainPageUsersRecordList.isNotEmpty
               ? mainPageUsersRecordList.first
               : null;

@@ -38,7 +38,6 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
     _model.desiredGenderController ??= TextEditingController();
     _model.cityController ??= TextEditingController();
     _model.myBioController ??= TextEditingController();
-    _model.dpLinkController ??= TextEditingController();
   }
 
   @override
@@ -54,7 +53,6 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).secondary,
         automaticallyImplyLeading: false,
@@ -89,6 +87,12 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                     height: 100.0,
                     decoration: BoxDecoration(
                       color: Color(0xFFDBE2E7),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.asset(
+                          'assets/images/vecteezy_profile-icon-design-vector_5544718.jpg',
+                        ).image,
+                      ),
                       shape: BoxShape.circle,
                     ),
                     child: Padding(
@@ -157,7 +161,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                           ),
                           child: CachedNetworkImage(
                             imageUrl: _model.uploadedFileUrl,
-                            fit: BoxFit.fitWidth,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -486,6 +490,7 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Align(
                   alignment: AlignmentDirectional(0.0, 0.05),
@@ -561,60 +566,6 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                   ),
                 ),
               ],
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 16.0),
-              child: TextFormField(
-                controller: _model.dpLinkController,
-                textCapitalization: TextCapitalization.words,
-                obscureText: false,
-                decoration: InputDecoration(
-                  labelText: 'Link',
-                  labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                  hintText: 'Link for profile pic',
-                  hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).alternate,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).primary,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).error,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).error,
-                      width: 2.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  filled: true,
-                  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                  contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 0.0, 24.0),
-                ),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Urbanist',
-                      fontSize: 10.0,
-                      lineHeight: 1.0,
-                    ),
-                maxLines: null,
-                validator:
-                    _model.dpLinkControllerValidator.asValidator(context),
-              ),
             ),
           ],
         ),
